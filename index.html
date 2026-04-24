@@ -103,17 +103,11 @@
     pointer-events:none;
   }
 
-  /* Yantra SVG logo — centrepiece */
-  .yantra-wrap {
+  /* K mark logo — centrepiece */
+  .k-mark-wrap {
     width:120px; height:120px;
     margin:0 auto 40px;
     position:relative;
-    animation:spin-slow 40s linear infinite;
-  }
-  @keyframes spin-slow { to { transform:rotate(360deg); } }
-  .yantra-inner {
-    position:absolute; inset:0;
-    animation:spin-slow 40s linear infinite reverse;
   }
 
   .hero-tag {
@@ -448,15 +442,14 @@
 <nav>
   <a href="#" class="nav-brand">
     <svg class="nav-logo" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Sri Yantra-inspired mark -->
-      <circle cx="18" cy="18" r="17" stroke="#c9a84c" stroke-width="0.8" opacity="0.4"/>
-      <circle cx="18" cy="18" r="12" stroke="#c9a84c" stroke-width="0.5" opacity="0.3"/>
-      <!-- Upward triangle -->
-      <polygon points="18,4 30,28 6,28" stroke="#c9a84c" stroke-width="1.2" fill="rgba(201,168,76,0.06)"/>
-      <!-- Downward triangle -->
-      <polygon points="18,32 6,8 30,8" stroke="#e8c96a" stroke-width="1" fill="rgba(232,201,106,0.04)"/>
-      <!-- Centre dot -->
-      <circle cx="18" cy="18" r="2.5" fill="#c9a84c"/>
+      <!-- Outer ring -->
+      <circle cx="18" cy="18" r="17" stroke="#c9a84c" stroke-width="1" opacity="0.5"/>
+      <!-- K letterform -->
+      <line x1="11" y1="9" x2="11" y2="27" stroke="#c9a84c" stroke-width="2.2" stroke-linecap="round"/>
+      <line x1="11" y1="18" x2="24" y2="9"  stroke="#c9a84c" stroke-width="2.2" stroke-linecap="round"/>
+      <line x1="11" y1="18" x2="24" y2="27" stroke="#c9a84c" stroke-width="2.2" stroke-linecap="round"/>
+      <!-- Field arc -->
+      <path d="M24,9 Q31,18 24,27" stroke="#e8c96a" stroke-width="1.2" fill="none" opacity="0.6" stroke-linecap="round"/>
     </svg>
     <span class="nav-wordmark">K<span>shetra</span></span>
   </a>
@@ -473,29 +466,24 @@
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
 
-  <!-- Yantra logo mark -->
-  <div class="yantra-wrap">
+  <!-- K mark logo -->
+  <div class="k-mark-wrap">
     <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="60" cy="60" r="58" stroke="#c9a84c" stroke-width="0.8" opacity="0.3"/>
-      <circle cx="60" cy="60" r="48" stroke="#c9a84c" stroke-width="0.6" opacity="0.25"/>
-      <circle cx="60" cy="60" r="36" stroke="#e8c96a" stroke-width="0.5" opacity="0.2"/>
-      <!-- Outer upward triangle -->
-      <polygon points="60,8 108,92 12,92" stroke="#c9a84c" stroke-width="1.5" fill="rgba(201,168,76,0.04)"/>
-      <!-- Outer downward triangle -->
-      <polygon points="60,112 12,28 108,28" stroke="#e8c96a" stroke-width="1.2" fill="rgba(232,201,106,0.03)"/>
-      <!-- Inner upward triangle -->
-      <polygon points="60,30 86,74 34,74" stroke="#c9a84c" stroke-width="1" fill="rgba(201,168,76,0.06)"/>
-      <!-- Inner downward triangle -->
-      <polygon points="60,90 34,46 86,46" stroke="#e8c96a" stroke-width="0.8" fill="rgba(232,201,106,0.04)"/>
-      <!-- Bindu (centre point) -->
-      <circle cx="60" cy="60" r="4" fill="#c9a84c"/>
-      <circle cx="60" cy="60" r="8" stroke="#c9a84c" stroke-width="0.6" opacity="0.4"/>
+      <!-- Outer ring -->
+      <circle cx="60" cy="60" r="56" stroke="#c9a84c" stroke-width="1" opacity="0.3"/>
+      <!-- Dashed orbit ring -->
+      <circle cx="60" cy="60" r="50" stroke="#c9a84c" stroke-width="0.8" opacity="0.15" stroke-dasharray="5 10"/>
+      <!-- Inner fill circle -->
+      <circle cx="60" cy="60" r="42" fill="rgba(201,168,76,0.06)" stroke="#c9a84c" stroke-width="0.8" opacity="0.25"/>
+      <!-- K letterform — bold, centered -->
+      <line x1="38" y1="28" x2="38" y2="92" stroke="#c9a84c" stroke-width="7" stroke-linecap="round"/>
+      <line x1="38" y1="60" x2="78" y2="28" stroke="#c9a84c" stroke-width="7" stroke-linecap="round"/>
+      <line x1="38" y1="60" x2="78" y2="92" stroke="#c9a84c" stroke-width="7" stroke-linecap="round"/>
+      <!-- Field arc — right side -->
+      <path d="M78,28 Q96,60 78,92" stroke="#e8c96a" stroke-width="3" fill="none" opacity="0.7" stroke-linecap="round"/>
+      <!-- Small accent dot -->
+      <circle cx="38" cy="60" r="4" fill="#e8c96a" opacity="0.8"/>
     </svg>
-    <div class="yantra-inner">
-      <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="60" cy="60" r="54" stroke="rgba(201,168,76,0.08)" stroke-width="1" stroke-dasharray="4 8"/>
-      </svg>
-    </div>
   </div>
 
   <div class="hero-tag">
@@ -664,9 +652,9 @@
   <div class="vision-wrap">
     <span class="vision-quote-mark">"</span>
     <p class="vision-quote">
-      The field (Kshetra) is this body. He who knows it is called the Knower of the Field.
+      The most profound technologies are those that disappear. They weave themselves into the fabric of everyday life until they are indistinguishable from it.
     </p>
-    <div class="vision-attr">— Bhagavad Gita, Chapter 13 · <span>The Field and Its Knower</span></div>
+    <div class="vision-attr">— Mark Weiser · <span>Pioneer of Ubiquitous Computing</span></div>
   </div>
 </div>
 
@@ -733,9 +721,11 @@
 <footer>
   <a href="#" class="footer-brand">
     <svg width="24" height="24" viewBox="0 0 36 36" fill="none">
-      <polygon points="18,4 30,28 6,28" stroke="#c9a84c" stroke-width="1.2" fill="rgba(201,168,76,0.1)"/>
-      <polygon points="18,32 6,8 30,8" stroke="#e8c96a" stroke-width="1" fill="rgba(232,201,106,0.06)"/>
-      <circle cx="18" cy="18" r="2" fill="#c9a84c"/>
+      <circle cx="18" cy="18" r="17" stroke="#c9a84c" stroke-width="1" opacity="0.5"/>
+      <line x1="11" y1="9"  x2="11" y2="27" stroke="#c9a84c" stroke-width="2.2" stroke-linecap="round"/>
+      <line x1="11" y1="18" x2="24" y2="9"  stroke="#c9a84c" stroke-width="2.2" stroke-linecap="round"/>
+      <line x1="11" y1="18" x2="24" y2="27" stroke="#c9a84c" stroke-width="2.2" stroke-linecap="round"/>
+      <path d="M24,9 Q31,18 24,27" stroke="#e8c96a" stroke-width="1.2" fill="none" opacity="0.6" stroke-linecap="round"/>
     </svg>
     <span class="footer-wordmark">K<span>shetra</span> · kshetra.com.au</span>
   </a>
