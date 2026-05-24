@@ -340,6 +340,34 @@
   .product-cta svg { transition:transform .2s; }
   .product-card:hover .product-cta svg { transform:translateX(4px); }
 
+  /* ── Store badges (ScanEat) ── */
+  .store-badges {
+    display:flex; flex-direction:column; gap:8px; flex-shrink:0;
+  }
+  .store-badge {
+    display:inline-flex; align-items:center; gap:10px;
+    padding:9px 14px; border-radius:9px;
+    border:1px solid rgba(255,255,255,0.12);
+    background:rgba(255,255,255,0.04);
+    text-decoration:none; color:var(--white);
+    white-space:nowrap; transition:all .2s;
+    position:relative; z-index:1;
+    min-width:148px;
+  }
+  .store-badge:hover {
+    border-color:rgba(201,168,76,0.45);
+    background:rgba(201,168,76,0.07);
+    color:var(--gold2);
+    transform:translateY(-1px);
+  }
+  .store-badge svg { flex-shrink:0; opacity:0.85; }
+  .store-badge:hover svg { opacity:1; }
+  .store-badge-label { display:flex; flex-direction:column; line-height:1.25; }
+  .store-badge-pre {
+    font-size:9px; font-weight:500; opacity:0.6; letter-spacing:0.3px;
+  }
+  .store-badge-name { font-size:12px; font-weight:700; }
+
   .coming-soon-card {
     background:var(--navy2); border:1px dashed rgba(255,255,255,0.08);
     border-radius:20px; padding:40px;
@@ -636,7 +664,7 @@
       </a>
 
       <!-- ScanEat -->
-      <a href="https://github.com/dpanwar-vigyan/ScanEat" target="_blank" rel="noopener" class="product-card">
+      <div class="product-card">
         <div class="product-icon" style="background:linear-gradient(135deg,rgba(34,197,94,0.25),rgba(16,185,129,0.15));border:1px solid rgba(34,197,94,0.2);">
           🍎
         </div>
@@ -659,11 +687,29 @@
             <span class="product-pill pill-blue">DynamoDB Cache</span>
           </div>
         </div>
-        <div class="product-cta">
-          View
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <div class="store-badges">
+          <!-- Apple App Store -->
+          <a href="https://apps.apple.com/app/id6766208305" target="_blank" rel="noopener" class="store-badge">
+            <svg width="18" height="22" viewBox="0 0 814 1000" fill="currentColor">
+              <path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.3-164-39.3c-76.5 0-103.7 40.8-165.9 40.8s-105.7-30.8-149.3-93.8c-49.8-72.7-91.6-181.2-91.6-282.4 0-218.4 143.1-333.9 283.8-333.9 75.6 0 138.2 51.9 183.9 51.9 43.4 0 111.7-54.7 196.1-54.7zm-174-53.6c35.8-42.8 61.3-102.3 61.3-161.8 0-8.3-.5-16.7-2.1-23.7-58.1 2.2-127.1 38.7-168.9 85.8-31.9 36.1-62.1 95.7-62.1 156.1 0 9.1 1.5 18.2 2.1 21.1 3.6.5 9.5 1.3 15.5 1.3 52.6 0 114.4-35.4 154.2-78.8z"/>
+            </svg>
+            <div class="store-badge-label">
+              <span class="store-badge-pre">Download on the</span>
+              <span class="store-badge-name">App Store</span>
+            </div>
+          </a>
+          <!-- Google Play closed testing -->
+          <a href="https://play.google.com/apps/testing/com.kshetra.scaneat" target="_blank" rel="noopener" class="store-badge">
+            <svg width="18" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M3.18 23.76c.35.2.74.24 1.12.12l11.86-6.86-2.5-2.5-10.48 9.24zM.5 1.1C.19 1.46 0 1.97 0 2.64v18.72c0 .67.19 1.18.5 1.54l.08.08 10.49-10.49v-.25L.58 1.02.5 1.1zm19.4 8.4L16.96 7.7 14.18 10.5l2.78 2.78 2.96-1.82c.84-.52.84-1.36-.02-1.96zM4.3.12L16.16 6.98l-2.5 2.5L3.18.24C3.56.12 3.95.16 4.3.32V.12z"/>
+            </svg>
+            <div class="store-badge-label">
+              <span class="store-badge-pre">Join Beta on</span>
+              <span class="store-badge-name">Google Play</span>
+            </div>
+          </a>
         </div>
-      </a>
+      </div>
 
     </div>
   </div>
